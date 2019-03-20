@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="formstyle.css"/>
+		<script type="text/javascript" src="program.js"></script>
+		
+		<title>ACE Course Based Registration</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<form method="post" 
+				  id="survey_form" 
+				  action="http://symlink.dk/code/php/submit/">
+				<fieldset>
+					<legend>Course Based Registration</legend>
+					<hr />
+					<div class="formfield">
+						<label for="Program" class="program">Program</label>
+						
+						<select id="program-dropdown" onchange="getSelectValue();" name="program">
+							<option value="programSelect">--Select--</option>
+							<option value="BIT">Business Information Technology</option>
+							<option value="BTM">Business Technology Management</option>
+							<option value="IS">Information Security</option>
+							<option value="IBIT">Introduction to Business Information Technology</option>
+						</select>
+
+					</div>
+					<div>
+						<label for="Course" class="course">Course</label>
+
+						<select id="course-dropdown" onchange="getCourseInfo();" name="course">
+							<!-- <option value="ACCT-1065">ACCT-1065 Financial Accounting for IT</option> -->
+						</select>
+					</div>
+				</fieldset>					
+				
+
+				<fieldset> <!-- when getCourseInfo() gets called, the course option times will show-->
+
+					<div id="courseInfo" class="visibility">
+
+					<input type="radio" class="times" onclick="showSelectedTime()" name="courseOption" id="time1" value="time1"> Mon 8-10 am, Tues 10 am - 1 pm<br>  
+					
+
+					<input type="radio" class="times" onclick="showSelectedTime()" name="courseOption" id="time2" value="time2"> Tues 10 am - 1pm, Wed 1 - 3 pm<br> 
+					</div>
+
+				</fieldset>
+
+
+
+				<fieldset>
+					<hr />
+					<input type="reset" value="Clear" onclick="resetForm();"/>
+					<input type="submit" value="Process Registration" />
+				</fieldset>
+
+
+				<div class="col-md-12 column">
+			<table class="table table-bordered maintbl" border=1>
+				<thead style="background: cyan;">
+					<tr style="font-size: 130%;">
+						<th colspan=3 class=tm2 style="font-size: large;">Time</th>
+						<th>Monday</th>
+						<th>Tuesday</th>
+						<th>Wednesday</th>
+						<th>Thursday</th>
+						<th>Friday</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class=structtd></td>
+					<td colspan=2 class="tm">
+						8:00-<br>8:50
+					</td>
+					<td class="monday_eight"> </td>
+					<td class="tuesday_eight"> </td>
+					<td class="wednesday_eight"></td>
+					<td class="thursday_eight"></td>
+					<td class="friday_eight"></td>
+				</tr>
+				
+				<tr>
+					<td class=structtd></td>
+					<td colspan=2 class="tm">
+						9:00-<br>9:50
+					</td>
+					<td class="monday_nine"></td>
+					<td class="tuesday_nine"></td>
+					<td class="wednesday_nine"></td>
+					<td class="thursday_nine"></td>
+					<td class="friday_nine"></td>
+				</tr>
+
+				<tr>
+					<td class=structtd></td>
+					<td colspan=2 class="tm">
+						10:00-<br>10:50
+					</td>
+					<td class="monday_ten"></td>
+					<td class="tuesday_ten"></td>
+					<td class="wednesday_ten"></td>
+					<td class="thursday_ten"></td>
+					<td class="friday_ten"></td>
+				</tr>
+
+				<tr>
+					<td class=structtd></td>
+					<td colspan=2 class="tm">
+						11:00-<br>11:50
+					</td>
+					<td class="monday_eleven"></td>
+					<td class="tuesday_eleven"></td>
+					<td class="wednesday_eleven"></td>
+					<td class="thursday_eleven"></td>
+					<td class="friday_eleven"></td>
+				</tr>
+
+				<tr>
+					<td class=structtd></td>
+					<td colspan=2 class="tm">
+						12:00-<br>12:50
+					</td>
+					<td class="monday_twelve"></td>
+					<td class="tuesday_twelve"></td>
+					<td class="wednesday_twelve"></td>
+					<td class="thursday_twelve"></td>
+					<td class="friday_twelve"></td>
+				</tr>
+
+				<tr>
+					<td class=structtd></td>
+					<td colspan=2 class="tm">
+						1:00-<br>1:50
+					</td>
+					<td class="monday_one"></td>
+					<td class="tuesday_one"></td>
+					<td class="wednesday_one"></td>
+					<td class="thursday_one"></td>
+					<td class="friday_one"></td>
+				</tr>
+
+				<tr>
+					<td class=structtd></td>
+					<td colspan=2 class="tm">
+						2:00-<br>2:50
+					</td>
+					<td class="monday_two"></td>
+					<td class="tuesday_two"></td>
+					<td class="wednesday_two"></td>
+					<td class="thursday_two"></td>
+					<td class="friday_two"></td>
+				</tr>
+
+				<tr>
+					<td class=structtd></td>
+					<td colspan=2 class="tm">
+						3:00-<br>3:50
+					</td>
+					<td class="monday_three"></td>
+					<td class="tuesday_three"></td>
+					<td class="wednesday_three"></td>
+					<td class="thursday_three"></td>
+					<td class="friday_three"></td>
+				</tr>
+				</tbody>
+			</table>
+
+
+			</form>
+		</div>
+	</body>
+</html>
